@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "login-app-4b": {
+      "hosting": {
+        "ejercicio_1": [
+          "login-app-4b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "login-app-4b"
+  }
+}

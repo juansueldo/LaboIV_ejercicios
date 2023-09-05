@@ -1,0 +1,88 @@
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form-container{
+    background: linear-gradient(#E9374C,#D31128);
+    font-family: 'Roboto', sans-serif;
+    width: 85%;
+    height: 80%;
+    font-size: 0;
+    padding: 0 15px;
+    border: 1px solid #DC2036;
+    border-radius: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+}
+.form-horizontal{
+    background: rgba(255,255,255,0.99);
+    width: 70%;
+    height: 100%;
+    margin: -20px 0;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-control{
+    background-color: rgba(255,255,255,0.15);
+    margin: 50px 40px 15px;
+    padding: 10px;
+    border: 1px solid #b5b5b5;
+    border-radius: 30px;
+    height: 40px;
+    width: 80%;
+    font-size: 23px;
+}
+.form-horizontal .form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+.form-horizontal .form-control::placeholder{
+    color: #b5b5b5;
+    font-size: 23px;
+    padding: 10px;
+    text-transform: capitalize;
+}
+h1, h2{
+    color: black;
+    font-size: 40px;
+}
+.left-position{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 250px;
+  color: #b5b5b5;
+}
+h2{
+    color: #fff; 
+}
+.btn{
+    color: rgba(255,255,255,0.8);
+    background: #E9374C;
+    font-size: 25px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 80%;
+    margin: 0 0px 20px 0;
+    border: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.form-horizontal .btn:hover,
+.form-horizontal .btn:focus{
+    color: #fff;
+    background-color: #D31128;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
