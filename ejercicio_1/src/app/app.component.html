@@ -1,3 +1,17 @@
 
+
 <router-outlet></router-outlet>
-                
+<div class="container">
+    <div class="form-container">
+      <div class="form-horizontal">
+        <h1 class="title">Suma de edades</h1>
+        <input class="form-control" [(ngModel)]="edadUno" type="number" placeholder="Edad uno">     
+        <input class="form-control" [(ngModel)]="edadDos" type="number" placeholder="Edad dos">
+        <input type="button" class="btn signin" (click)="onClick($event)" [value]="btnValue"/>
+        <input type="button" class="btn signin" (click)="reset($event)" [value]="btnReset"/>
+      </div>
+      <div class="left-position">
+        <h2>{{restultado}}</h2>
+      </div>
+    </div>
+  </div> 

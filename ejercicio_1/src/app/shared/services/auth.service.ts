@@ -40,7 +40,8 @@ export class AuthService {
         }
       });
     } catch (error) {
-      window.alert(error);
+      localStorage.setItem('error', JSON.stringify(error));
+      this.router.navigate(['error']);
     }
   }
   get isLoggedIn(): boolean {

@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./error.component.scss']
 })
 export class ErrorComponent {
+  public error = JSON.parse(localStorage.getItem('error'));
 
 }
+
