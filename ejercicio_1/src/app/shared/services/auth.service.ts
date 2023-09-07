@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   userData: any;
+  
   constructor(
     public afs: AngularFirestore,
     public afAuth: AngularFireAuth,
@@ -40,13 +41,9 @@ export class AuthService {
         }
       });
     } catch (error) {
-      localStorage.setItem('error', JSON.stringify(error));
+      localStorage.setItem('errormessage', JSON.stringify(error.message));
       this.router.navigate(['error']);
     }
-  }
-  get isLoggedIn(): boolean {
-    const user = JSON.parse(localStorage.getItem('user')!);
-    return user !== null && user.emailVerified !== false ? true : false;
   }
   SetUserData(user: any) {
     const userRef: AngularFirestoreDocument<any> = this.afs.doc(
