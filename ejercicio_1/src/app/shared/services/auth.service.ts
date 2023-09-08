@@ -34,28 +34,21 @@ export class AuthService {
   async SignIn(email: string, password: string) {
     try {
       const result = await this.afAuth['signInWithEmailAndPassword'](email, password);
-      this.SetUserData(result.user);
-      this.afAuth.authState.subscribe((user_1) => {
-        if (user_1) {
-          this.router.navigate(['bienvenido']);
-        }
-      });
+      this.router.navigate(['bienvenido']);
     } catch (error) {
       localStorage.setItem('errormessage', JSON.stringify(error.message));
       this.router.navigate(['error']);
     }
   }
-  SetUserData(user: any) {
-    const userRef: AngularFirestoreDocument<any> = this.afs.doc(
-      `users/${user.uid}`
-    );
-    const userData: User = {
-      uid: user.uid,
-      email: user.email,
-      displayName: user.displayName,
-    };
-    return userRef.set(userData, {
-      merge: true,
-    });
+  async Register(email: string, password: string){
+    try{
+      const result = await this.afAuth['createUserWithEmailAndPassword'](email, password);
+      this.router.navigate(['bienvenido']);
+    }catch(error){
+      localStorage.setItem('errormessage', JSON.stringify(error.message));
+      this.router.navigate(['error']);
+    }
   }
-}
+  
+  }
+

@@ -16,12 +16,16 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
+import { RegistroComponent } from './components/registro/registro.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     ErrorComponent,
     BienvenidoComponent,
+    RegistroComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,7 @@
-
-<div class="container">
-    <div class="form-container">
-      <div class="form-horizontal">
-        <h1 class="title">Bienvenido {{user.email}}</h1>
-      </div>
-      <div class="left-position">
-
-      </div>
-    </div>
-  </div> 
+<nav></nav><h2>Bienvenido</h2>
+<div id="container">
+  {{user.email}}
+</div>
+<div class="btn-container">
+    <button (click)="closeSession()">Cerrar Sesión</button>
+</div>

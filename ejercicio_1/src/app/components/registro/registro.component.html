@@ -1,0 +1,19 @@
+<div class="login-container">
+    <h2>Registro</h2>
+    <form>
+        <div class="input-container">
+            <i class="fas fa-user"></i>
+            <input #userName  type="email" id="email" placeholder="Usuario" required>
+        </div>
+        <div class="input-container">
+            <i class="fas fa-lock"></i>
+            <input  #userPassword  type="password" id="password" placeholder="Contraseña" required>
+        </div>
+        <div class="btn-container">
+          <button type="submit" id="submit" (click)="authService.Register(userName.value, userPassword.value)">Crear Cuenta</button>
+        </div>
+        <div class="register">
+          <p>Ya tenes cuenta? <a href="" routerLink="/login">Ingresa</a> </p>
+        </div>
+    </form>
+  </div>

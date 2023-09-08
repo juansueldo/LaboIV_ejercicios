@@ -1,12 +1,19 @@
-<div class="container">
-  <div class="form-container">
-    <div class="form-horizontal">
-      <h1 class="title">Login</h1>
-      <input class="form-control" #userName required type="email" placeholder="Ingresa tu email">     
-      <input class="form-control" #userPassword required type="password" placeholder="Ingresa tu clave">
-      <input type="button" class="btn signin" (click)="authService.SignIn(userName.value, userPassword.value)" value="login"/>
-    </div>
-    <div class="left-position">
-    </div>
-  </div>
+<div class="login-container">
+  <h2>Login</h2>
+  <form>
+      <div class="input-container">
+          <i class="fas fa-user"></i>
+          <input #userName  type="email" id="email" placeholder="Usuario" required>
+      </div>
+      <div class="input-container">
+          <i class="fas fa-lock"></i>
+          <input  #userPassword  type="password" id="password" placeholder="Contraseña" required>
+      </div>
+      <div class="btn-container">
+        <button type="submit" id="submit" (click)="authService.SignIn(userName.value, userPassword.value)">Iniciar Sesión</button>
+      </div>
+      <div class="register">
+        <p>No tenes cuenta? <a href="" routerLink="/registro">Registrate</a> </p>
+      </div>
+  </form>
 </div>
